@@ -1,10 +1,4 @@
-﻿.track-title a{
-    font:x-large;
-    color:red;
-    padding:5px;
-
-}
-.awesome{
+﻿.awesome{
     background-color:white;
     margin: 5px;
     font: normal arial, verdana  bold;
@@ -16,11 +10,6 @@
     overflow:hidden;
 }
 
-.cutieMark{
-    height:100px;
-    float:right;
-}
-
 .inner{
     float:left;
 }
@@ -29,13 +18,6 @@
     cursor:pointer;
 }
 
-.track-list-page{
-    border-radius: 5px;
-    color: #333333;
-    padding:0px 15px 10px 15px;
-    overflow:hidden;
-    background-color:white;
-}
 .tracks{
     overflow:hidden;
     background-color:#ffffff;
@@ -50,32 +32,27 @@ h4 a{
     color:#333333;
     cursor:pointer;
 }
-.bottom-buttons{
-    overflow:hidden;
-}
-.bottom-buttons button{
-    border:solid white 2px;
-    border-radius:5px;
-    background-color: hotpink;
-    color: white;
-    font-weight:bold;
-    font-size:x-large;
-}
-.btnPrevious{
-    float:left;
-}
-.btnNext{
-    float:right;
-    
-    border-width:5px;
+
+#logo{
+    width:200px;
+    position:fixed;
+    top:50px;
+    left:15px;
+    z-index:150;
 }
 
+.player{
+    margin-top: 10px;
+}
+
+
+/*SEARCH*/
 #btnSearch{
     border:2px solid hotpink;
     border-radius:5px;
     height:30px;
     font-size:large;
-    margin-left:5px;
+    margin:5px 5px 0px 0px;
     float:left;
     background-color:#ffffff;
 }
@@ -85,30 +62,21 @@ h4 a{
     height:30px;
     font-size:large;
     float:left;
+    margin:5px;
 }
 
 #topSearch{
     position: fixed;
     top: 240px;
     left: 10px;
-    width: 320px;
+    /*width: 320px;*/
     background-color:#ffffff;
     border:2px solid hotpink;
     border-radius:5px;
-    padding:10px;
     z-index:1000 !important;
 }
-       
-#btnOptions{
-    position:fixed;
-    bottom:5px;
-    right:5px;
-        
-}
-.pinkiepie, .fluttershy, .princessts, .applejack, .rainbowdash, .rarity{
-    border-width:5px;
-}
 
+/*AUTOCOMPLETE*/
 .ui-autocomplete{
     position:relative;
     cursor:default;
@@ -121,13 +89,4 @@ h4 a{
 
 .ui-menu-item:hover{
     background-color:lightskyblue;
-}
-
-
-#logo{
-    width:200px;
-    position:fixed;
-    top:50px;
-    left:15px;
-    z-index:150;
 }

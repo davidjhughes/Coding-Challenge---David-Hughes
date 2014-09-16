@@ -24,7 +24,7 @@ namespace PonyMusic.Controllers
         public ActionResult Index(string query)
         {
             TrackSearchResult tsResult = new TrackSearchResult();
-            return View(tsResult.GetTrackSearchResults(query, 100));
+            return View(tsResult.GetTrackSearchResults(query, 500));
         }
 
 
@@ -32,7 +32,7 @@ namespace PonyMusic.Controllers
         {
 
             TrackSearchResult tsResult = new TrackSearchResult();
-            List<TrackSearchResult> suggestions = tsResult.GetTrackSearchResults(query, 100);
+            List<TrackSearchResult> suggestions = tsResult.GetTrackSearchResults(query, 20);
             string[] titles = new string[suggestions.Count];
             for (var i = 0; i < suggestions.Count; i++ )
             {

@@ -23,7 +23,8 @@ namespace PonyMusic.Models
     {
         public string TrackTitle { get; set; }
         public string ArtistName { get; set; }
-        public string TrackURL { get; set; }
+        public string MP3 { get; set; }
+        public string OGG { get; set; }
         public string TrackLink { get; set; }
         public string ArtistLink { get; set; }
         public string ArtLink { get; set; }
@@ -55,11 +56,12 @@ namespace PonyMusic.Models
                 searchResult = new TrackSearchResult();
                 searchResult.TrackTitle = doc.Get("trackTitle");
                 searchResult.ArtistName = doc.Get("artistName");
-                searchResult.TrackURL = doc.Get("trackURL");
+                searchResult.MP3 = doc.Get("trackMP3");
+                searchResult.OGG = doc.Get("trackOGG");
                 searchResult.TrackLink = doc.Get("trackLink");
                 searchResult.ArtistLink = doc.Get("artistLink");
                 searchResult.ArtistLink = doc.Get("artLink");
-                if(searchResults.FindAll(x=> x.TrackURL == searchResult.TrackURL).Count == 0){
+                if(searchResults.FindAll(x=> x.MP3 == searchResult.MP3).Count == 0){
                     searchResults.Add(searchResult);
                 }
                 

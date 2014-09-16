@@ -45,7 +45,8 @@ namespace PonyMusic.App_Start
                 doc = new Document();
                 doc.Add(new Field("trackTitle", track.Title, Field.Store.YES, Field.Index.ANALYZED));
                 doc.Add(new Field("artistName", track.Artist.Name, Field.Store.YES, Field.Index.NOT_ANALYZED));
-                doc.Add(new Field("trackURL", track.Download.MP3, Field.Store.YES, Field.Index.NOT_ANALYZED));
+                doc.Add(new Field("trackMP3", track.Download.MP3, Field.Store.YES, Field.Index.NOT_ANALYZED));
+                doc.Add(new Field("trackOGG", track.Download.Vorbis, Field.Store.YES, Field.Index.NOT_ANALYZED));
                 doc.Add(new Field("trackLink", track.Link, Field.Store.YES, Field.Index.NOT_ANALYZED));
                 doc.Add(new Field("artistLink", track.Artist.Link, Field.Store.YES, Field.Index.NOT_ANALYZED));
                 if(!String.IsNullOrEmpty(track.Download.Art)){
