@@ -1,0 +1,133 @@
+﻿.track-title a{
+    font:x-large;
+    color:red;
+    padding:5px;
+
+}
+.awesome{
+    background-color:white;
+    margin: 5px;
+    font: normal arial, verdana  bold;
+    padding: 5px;
+    border: solid hotpink 2px;
+    border-radius: 5px;
+    color:black;
+    z-index:99;
+    overflow:hidden;
+}
+
+.cutieMark{
+    height:100px;
+    float:right;
+}
+
+.inner{
+    float:left;
+}
+.awesome a{
+    color: #662F89;
+    cursor:pointer;
+}
+
+.track-list-page{
+    border-radius: 5px;
+    color: #333333;
+    padding:0px 15px 10px 15px;
+    overflow:hidden;
+    background-color:white;
+}
+.tracks{
+    overflow:hidden;
+    background-color:#ffffff;
+}
+
+h3 a{
+    color:#333333;
+    cursor:pointer;
+}
+
+h4 a{
+    color:#333333;
+    cursor:pointer;
+}
+.bottom-buttons{
+    overflow:hidden;
+}
+.bottom-buttons button{
+    border:solid white 2px;
+    border-radius:5px;
+    background-color: hotpink;
+    color: white;
+    font-weight:bold;
+    font-size:x-large;
+}
+.btnPrevious{
+    float:left;
+}
+.btnNext{
+    float:right;
+    
+    border-width:5px;
+}
+
+#btnSearch{
+    border:2px solid hotpink;
+    border-radius:5px;
+    height:30px;
+    font-size:large;
+    margin-left:5px;
+    float:left;
+    background-color:#ffffff;
+}
+
+#txtSearch{
+    border-radius:5px;
+    height:30px;
+    font-size:large;
+    float:left;
+}
+
+#topSearch{
+    position: fixed;
+    top: 240px;
+    left: 10px;
+    width: 320px;
+    background-color:#ffffff;
+    border:2px solid hotpink;
+    border-radius:5px;
+    padding:10px;
+    z-index:1000 !important;
+}
+       
+#btnOptions{
+    position:fixed;
+    bottom:5px;
+    right:5px;
+        
+}
+.pinkiepie, .fluttershy, .princessts, .applejack, .rainbowdash, .rarity{
+    border-width:5px;
+}
+
+.ui-autocomplete{
+    position:relative;
+    cursor:default;
+    z-index:9999 !important;
+    max-width:320px;
+    border:2px solid #662F89;   
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+}
+
+.ui-menu-item:hover{
+    background-color:lightskyblue;
+}
+
+
+#logo{
+    width:200px;
+    position:fixed;
+    top:50px;
+    left:15px;
+    z-index:150;
+}

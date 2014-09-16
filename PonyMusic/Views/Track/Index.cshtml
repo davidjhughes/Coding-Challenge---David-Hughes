@@ -1,0 +1,51 @@
+﻿
+@model IEnumerable<PonyMusic.Models.TrackSearchResult>
+
+
+@{
+    ViewBag.Title = "Track Listing";
+}
+
+
+<img src="~/Images/logo.png" id="logo" />
+<div id="topSearch">
+    <input id="txtSearch" name="query" placeholder="Search..." type="text" />
+    <button id="btnSearch">Search</button>
+    
+</div>
+<div class="tracks">
+    @for (var i = 0; i <= Model.Count() - 1; i++)
+    {
+
+        <div class="awesome" >
+
+            
+            <div class="inner">
+                <h4><a href="@Model.ElementAt(i).TrackLink" target="_blank">@Model.ElementAt(i).TrackTitle</a></h4>
+                <div class="artist-name"><a href="@Model.ElementAt(i).ArtistLink" target="_blank"> @Model.ElementAt(i).ArtistName</a></div>
+                @if (!String.IsNullOrEmpty(Model.ElementAt(i).TrackURL))
+                {
+                    <audio controls preload="metadata" >
+                        <source src="@Model.ElementAt(i).TrackURL?stream=1" type="audio/mpeg; codecs='mp3'">
+                        Your browser does not support the audio element.
+                    </audio>
+                }
+
+            </div>
+        </div>
+    }
+ </div>
+
+<script>
+
+    $("#btnSearch").click(function () {
+
+        var queryParam = $("#txtSearch").val();
+        var url = '@Url.Action("index", "track", new { query = "__query__" })';
+        window.location.href = url.replace('__query__', queryParam);
+
+    });
+
+
+</script>
+
